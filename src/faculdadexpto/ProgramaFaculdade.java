@@ -16,7 +16,9 @@ public class ProgramaFaculdade {
             alterar();
         } else {
             System.out.println("Opção inválida!");
-        }        
+        }       
+
+        sc.close();
     }
 
     public static void cadastrar() {

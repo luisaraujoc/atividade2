@@ -22,97 +22,38 @@ public class Carro {
         // irra
     }
 
-    public void cadrastrarCarro(String cor, String marca, String modelo, String tipoCombustivel, String tipoCarro, int numeroDePortas, int codigoDeFabricacao, int quantidadeDisponivel, Double preco) {
-        Carro car = new Carro(cor, marca, modelo, tipoCombustivel, tipoCarro, numeroDePortas, codigoDeFabricacao, quantidadeDisponivel, preco);
+    public void cadrastrarCarro(Carro carro) {
+        this.cor = carro.cor;
+        this.marca = carro.marca;
+        this.modelo = carro.modelo;
+        this.tipoCombustivel = carro.tipoCombustivel;
+        this.tipoCarro = carro.tipoCarro;
+        this.numeroDePortas = carro.numeroDePortas;
+        this.codigoDeFabricacao = carro.codigoDeFabricacao;
+        this.quantidadeDisponivel = carro.quantidadeDisponivel;
+        this.preco = carro.preco;
     }
 
-    public void alterarCarro(String cor, String marca, String modelo, String tipoCombustivel, String tipoCarro, int numeroDePortas, int codigoDeFabricacao, int quantidadeDisponivel, Double preco) {
-        Carro car = new Carro(cor, marca, modelo, tipoCombustivel, tipoCarro, numeroDePortas, codigoDeFabricacao, quantidadeDisponivel, preco);
+    public void alterarCarro(Carro carro) {
+        this.cor = carro.cor;
+        this.marca = carro.marca;
+        this.modelo = carro.modelo;
+        this.tipoCombustivel = carro.tipoCombustivel;
+        this.tipoCarro = carro.tipoCarro;
+        this.numeroDePortas = carro.numeroDePortas;
+        this.codigoDeFabricacao = carro.codigoDeFabricacao;
+        this.quantidadeDisponivel = carro.quantidadeDisponivel;
+        this.preco = carro.preco;
     }
     
     public void imprimirCarro(Carro carro) {
-        System.out.println("Cor: " + carro.getCor());
-        System.out.println("Marca: " + carro.getMarca());
-        System.out.println("Modelo: " + carro.getModelo());
-        System.out.println("Tipo de combustível: " + carro.getTipoCombustivel());
-        System.out.println("Tipo de carro: " + carro.getTipoCarro());
-        System.out.println("Número de portas: " + carro.getNumeroDePortas());
-        System.out.println("Código de fabricação: " + carro.getCodigoDeFabricacao());        
-    }
-
-
-    public String getCor() {
-        return cor;
-    }
-
-    public void setCor(String cor) {
-        this.cor = cor;
-    }
-
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public String getModelo() {
-        return modelo;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
-
-
-    public String getTipoCombustivel() {
-        return tipoCombustivel;
-    }
-
-
-    public void setTipoCombustivel(String tipoCombustivel) {
-        this.tipoCombustivel = tipoCombustivel;
-    }
-
-    public void setTipoCarro(String tipoCarro) {
-        this.tipoCarro = tipoCarro;
-    }
-
-    public String getTipoCarro() {
-        return tipoCarro;
-    }
-
-    public int getNumeroDePortas() {
-        return numeroDePortas;
-    }
-
-    public void setNumeroDePortas(int numeroDePortas) {
-        this.numeroDePortas = numeroDePortas;
-    }
-
-    public int getCodigoDeFabricacao() {
-        return codigoDeFabricacao;
-    }
-
-    public void setCodigoDeFabricacao(int codigoDeFabricacao) {
-        this.codigoDeFabricacao = codigoDeFabricacao;
-    }
-
-    public int getQuantidadeDisponivel() {
-        return quantidadeDisponivel;
-    }
-
-    public void setQuantidadeDisponivel(int quantidadeDisponivel) {
-        this.quantidadeDisponivel = quantidadeDisponivel;
-    }
-
-    public double getPreco() {
-        return preco;
-    }
-
-    public void setPreco(double preco) {
-        this.preco = preco;
+        System.out.println("Cor: " + carro.cor);
+        System.out.println("Marca: " + carro.marca);
+        System.out.println("Modelo: " + carro.modelo);
+        System.out.println("Tipo de combustível: " + carro.tipoCombustivel);
+        System.out.println("Tipo de carro: " + carro.tipoCarro);
+        System.out.println("Número de portas: " + carro.numeroDePortas);
+        System.out.println("Código de fabricação: " + carro.codigoDeFabricacao);
     }
 
 }

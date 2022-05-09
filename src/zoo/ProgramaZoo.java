@@ -52,8 +52,9 @@ public class ProgramaZoo {
         numeroDeRegistro = sc.nextInt();
 
 
-        CadastroZoo animal = new CadastroZoo(nome, especie, localDeNascimento, dataDeNascimento, numeroDeRegistro);
-        CadastroZoo.imprimirCadastro(animal);
+        Zoo animal = new Zoo(nome, especie, localDeNascimento, dataDeNascimento, numeroDeRegistro);
+        animal.cadatrarAnimal(animal);
+        Zoo.imprimirCadastro(animal);
 
         sc.close();
     }
@@ -88,8 +89,9 @@ public class ProgramaZoo {
         System.out.println("Digite o número de registro do animal:");
         numeroDeRegistro = sc.nextInt();
 
-        CadastroZoo animal = new CadastroZoo(nome, especie, localDeNascimento, dataDeNascimento, numeroDeRegistro);
-        CadastroZoo.imprimirCadastro(animal);
+        Zoo animal = new Zoo(nome, especie, localDeNascimento, dataDeNascimento, numeroDeRegistro);
+        animal.alterarCadastro(animal);
+        Zoo.imprimirCadastro(animal);
 
         sc.close();
     }
@@ -100,3 +102,7 @@ public class ProgramaZoo {
         return date;
     }
 }
+
+
+
+// vamboraaaaaaaaa

@@ -16,6 +16,7 @@ public class ProgramaCarro {
             System.out.println("Opção inválida!");
         }
         
+        sc.close();
     }
 
 
@@ -50,6 +51,7 @@ public class ProgramaCarro {
         double preco = sc.nextDouble();
 
         Carro car = new Carro(cor, marca, modelo, tipoCombustivel, tipoCarro, numeroDePortas, codigoDeFabricacao, quantidadeDisponivel, preco);
+        car.cadrastrarCarro(car);
         car.imprimirCarro(car);
 
         sc.close();
@@ -86,6 +88,7 @@ public class ProgramaCarro {
         double preco = sc.nextDouble();
 
         Carro car = new Carro(cor, marca, modelo, tipoCombustivel, tipoCarro, numeroDePortas, codigoDeFabricacao, quantidadeDisponivel, preco);
+        car.alterarCarro(car);
         car.imprimirCarro(car);
 
         sc.close();

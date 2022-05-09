@@ -20,6 +20,8 @@ public class ProgramaCarro {
         }else{
             System.out.println("Opção inválida!");
         }
+
+        sc.close();
     }
 
     public static void cadastrarPoup() {
@@ -46,9 +48,8 @@ public class ProgramaCarro {
         System.out.println("Digite um valor para ser depositado no saldo da conta:");
         double saldo = sc.nextDouble();
 
-
-        Poupanca.cadastrarPoupanca(nomeCorrentista, cpfCorrentista, rgCorrentista, numeroAgencia, numeroConta, saldo);
-        Poupanca.imprimirPoupanca(); //incompleta
+        Poupanca poup = new Poupanca(nomeCorrentista, cpfCorrentista, rgCorrentista, numeroAgencia, numeroConta, saldo);
+        Poupanca.cadastrarPoupanca(poup);
         sc.close();
 
     }
@@ -57,8 +58,7 @@ public class ProgramaCarro {
         Scanner sc = new Scanner(System.in);
 
         String nomeCorrentista;
-        int cpfCorrentista, rgCorrentista, numeroAgencia, numeroConta;
-        double saldo;
+        int cpfCorrentista, rgCorrentista, numeroAgencia;
 
 
         System.out.println("Digite o nome do correntista:");
@@ -73,14 +73,8 @@ public class ProgramaCarro {
         System.out.println("Digite o numero da agencia:");
         numeroAgencia = sc.nextInt();
 
-        System.out.println("Digite o numero da conta:");
-        numeroConta = sc.nextInt();
-
-        System.out.println("Digite um valor para ser depositado no saldo da conta:");
-        saldo = sc.nextDouble();
-
-        Poupanca.alterarPoupanca(nomeCorrentista, cpfCorrentista, rgCorrentista, numeroAgencia, numeroConta, saldo);
-        Poupanca.imprimirPoupanca(); //incompleta
+        
+        Poupanca.alterarPoupanca(nomeCorrentista, cpfCorrentista, rgCorrentista, numeroAgencia);
 
         sc.close();
     }
